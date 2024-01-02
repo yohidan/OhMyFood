@@ -1,0 +1,69 @@
+// Ressources générales concernant le site "Ohmyfood", dans cette partie nous retrouverons les polices d'écritures, les
+// variables ainsi que les mixins.
+
+        // Polices d'écriture
+
+// Police d'écriture : Shrikhand
+
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+// Police d'écriture : Roboto
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+
+
+        // Variables
+
+// Couleur principale
+
+$main-color: #9356DC;
+
+// Couleur secondaire
+
+$secondary-color: #FF79DA;
+
+// Couleur tertiaire
+
+$tertiary-color: #99E2D0;
+
+// Background Color
+
+$background-color: #EAEAEA;
+
+        // Mixins
+
+
+// Conformément aux exigences demandées, nous allons réaliser le site internet de Ohmyfood en utilisant la méthode
+// mobile-first
+
+body {
+        width: 100%;
+}
+
+header {
+        display: flex;
+        justify-content: center;
+}
+
+.header {
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        .header__logo {
+                font-family: 'Shrikhand';
+                font-size: 10vh;
+                margin: 0;
+        }
+        .header__location {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                &--paris {
+                        margin: 0;
+                        padding: 0;
+                }
+        }
+}
+
+
+
