@@ -37,6 +37,10 @@ $special-grey: #353535;
 
         // Mixins
 
+@mixin block-shadow {
+        box-shadow: 0px 4px 15px 0px #00000059;
+}
+
 
 // Conformément aux exigences demandées, nous allons réaliser le site internet de Ohmyfood en utilisant la méthode
 // mobile-first
@@ -75,7 +79,13 @@ main {
         height: 7.5vh;
         width: 58vw;
         border-radius: 25px;
-        background: linear-gradient(193.33deg, $main-color -11.44%, $secondary-color 123.93%);                        
+        background: linear-gradient(193.33deg, $main-color -11.44%, $secondary-color 123.93%);
+        @include block-shadow;     
+}
+
+.btn:hover {
+        background: linear-gradient(200.64deg, $main-color -5.2%, $secondary-color 110.74%),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
 }
 
 
@@ -84,6 +94,7 @@ main {
 .omf {
         display: flex;
         flex-direction: column;
+        width: 100%;
         .omf__background {
                 position: relative;
                 display: flex;
@@ -91,7 +102,6 @@ main {
                 align-items: center;
                 height: 9.45vh;
                 box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-                ;
                 &--logo {
                         font-family: 'Shrikhand';
                         font-size: 5.4vh;
@@ -120,25 +130,89 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        background-color: lighten(black, 96%);
+        height: 40vh;
+        width: 100%;
         top: 0;
-                .exploration__title {
-                        margin: 2vh auto;
-                        text-align: center;
-                        font-size: 3.5vh;
-                        font-weight: 700;
-                        width: 73.3vw;
+        .exploration__title {
+                margin: 0 auto;
+                text-align: center;
+                font-size: 3.5vh;
+                font-weight: 700;
+                width: 73.3vw;
                 }
-                .exploration__content {
-                        margin: 2.5vh auto;
-                        text-align: center;
-                        font-size: 2.7vh;
-                        font-weight: 300;
-                        width: 84vw;
-                        color: $special-grey;
+        .exploration__content {
+                margin: 2.5vh auto;
+                text-align: center;
+                font-size: 2.7vh;
+                font-weight: 300;
+                width: 84vw;
+                color: $special-grey;
                 }
-                .btn {
+        .btn {
+                margin: 0 auto;
+                }
+
+}
+
+// Fonctionnement
+
+.working {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 89.3vw;
+        height: 66vh;
+        margin: 0 auto;
+        top: 0;
+        .working__title {
+                font-size: 3.6vh;
+                font-weight: 700;
+                width: 73.3vw;
+        }
+        .step {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 86vw;
+                height: 10.85vh;
+                margin-top: 10px;
+                border-radius: 20px;
+                @include block-shadow;
+                .step__content {
+                        display: flex;
+                        margin-right: 50px;
+                        text-align: center;
+                        font-weight: 500;
+                        font-size: 2.4vh;
+                }
+                i {
+                        display: flex;
+                        color: #7E7E7E;
+                        font-size: 3vh;
                         margin: 0 auto;
                 }
+        }
+        .step__number {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #9356DC;
+                position: absolute;
+                left: -10px;
+                width: 20px;
+                height: 20px;
+                border-radius: 25px;
+                .step__number--content {
+                        color: white;
+                        border-radius: 50px;
+                        text-align: center;
+                        font-size: 2.12vh;
+                        font-weight: 500;
+                }
+        }
+
 
 }
 
