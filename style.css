@@ -1,30 +1,95 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+* {
+  max-width: 375px;
+}
+
 body {
+  margin: 0;
   width: 100%;
 }
 
-header {
-  display: flex;
-  justify-content: center;
+button, p, h2, h3, h4 {
+  font-family: "Roboto";
 }
 
-.header {
+header {
+  top: 0;
+  width: 100%;
+}
+
+main {
+  top: 0;
+  width: 100%;
+}
+
+.btn {
+  color: white;
+  font-size: 2.4vh;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: none;
+  height: 7.5vh;
+  width: 58vw;
+  border-radius: 25px;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+
+.omf {
   display: flex;
   flex-direction: column;
-  top: 0;
 }
-.header .header__logo {
+.omf .omf__background {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 9.45vh;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.omf .omf__background--logo {
   font-family: "Shrikhand";
-  font-size: 10vh;
+  font-size: 5.4vh;
   margin: 0;
 }
-.header .header__location {
+.omf .omf__location {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  background-color: #EAEAEA;
+  height: 7.5vh;
 }
-.header .header__location--paris {
-  margin: 0;
+.omf .omf__location--paris {
+  margin-left: 2vh;
   padding: 0;
+  font-size: 16px;
+  color: #353535;
+}
+
+.exploration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 0;
+}
+.exploration .exploration__title {
+  margin: 2vh auto;
+  text-align: center;
+  font-size: 3.5vh;
+  font-weight: 700;
+  width: 73.3vw;
+}
+.exploration .exploration__content {
+  margin: 2.5vh auto;
+  text-align: center;
+  font-size: 2.7vh;
+  font-weight: 300;
+  width: 84vw;
+  color: #353535;
+}
+.exploration .btn {
+  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */
