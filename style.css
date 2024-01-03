@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
-* {
-  max-width: 375px;
-}
-
 body {
   margin: 0;
   width: 100%;
@@ -11,6 +7,10 @@ body {
 
 button, p, h2, h3, h4 {
   font-family: "Roboto";
+}
+
+a {
+  text-decoration: none;
 }
 
 header {
@@ -107,14 +107,15 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 89.3vw;
-  height: 66vh;
+  width: 90vw;
+  height: 70vh;
   margin: 0 auto;
   top: 0;
 }
 .working .working__title {
   font-size: 3.6vh;
   font-weight: 700;
+  margin: 0;
   width: 73.3vw;
 }
 .working .step {
@@ -124,22 +125,26 @@ main {
   align-items: center;
   width: 86vw;
   height: 10.85vh;
-  margin-top: 10px;
+  margin-top: 5.25vh;
   border-radius: 20px;
+  background-color: #f6f6f6;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
 }
 .working .step .step__content {
   display: flex;
-  margin-right: 50px;
+  margin-right: 13.3vw;
   text-align: center;
   font-weight: 500;
   font-size: 2.4vh;
 }
-.working .step i {
+.working .step .fa-solid {
   display: flex;
   color: #7E7E7E;
   font-size: 3vh;
   margin: 0 auto;
+}
+.working .step .fa-store {
+  color: #9356DC;
 }
 .working .step__number {
   display: flex;
@@ -152,10 +157,88 @@ main {
   height: 20px;
   border-radius: 25px;
 }
-.working .step__number .step__number--content {
+.working .step__number--content {
   color: white;
   border-radius: 50px;
   text-align: center;
   font-size: 2.12vh;
   font-weight: 500;
+}
+
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90vw;
+  margin: 0 auto;
+  padding-bottom: 70px;
+  top: 0;
+}
+.restaurant .restaurant__title {
+  font-size: 24px;
+  font-weight: 700;
+  width: 73.3vw;
+  margin: 0;
+}
+.restaurant .card {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  width: 90.66vw;
+  height: 37.5vh;
+  margin: 30px 0 30px 0;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
+}
+.restaurant .card__img {
+  border-radius: 15px 15px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 70%;
+  width: 100%;
+}
+.restaurant .card .new {
+  position: absolute;
+  font-size: 2.1vh;
+  font-weight: 500;
+  text-align: center;
+  color: #008766;
+  background: #99E2D0;
+  width: 21.3vw;
+  height: 4.35vh;
+  border: none;
+  right: 10px;
+  top: 10px;
+  border-radius: 2px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+}
+.restaurant .card .card__content {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 5px;
+  width: 71.2vw;
+}
+.restaurant .card .card__content--title {
+  font-size: 2.7vh;
+  font-weight: 700;
+  margin: 0;
+  color: #000000;
+}
+.restaurant .card .card__content--text {
+  font-size: 2.55vh;
+  font-weight: 300;
+  margin: 0;
+  color: #000000;
+}
+.restaurant .card .card__like {
+  margin: auto 0;
+  padding: 0;
+  font-size: 3.15vh;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+.restaurant .card .card__like:active svg {
+  color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }/*# sourceMappingURL=style.css.map */
