@@ -20,8 +20,8 @@
         </div>
     </section>
 </header>
-<main>
 <!-- Cette section est dédiée à l'exploration des différents restaurants de la plateforme. -->
+<main>
     <section class="exploration">
         <h2 class="exploration__title">Réservez le menu qui vous convient</h2>
         <p class="exploration__content">Découvrez des restaurants d'exception, selectionnés par nos soins.</p>
@@ -54,9 +54,10 @@
     </section>
 <!-- Cette section est dédiée aux différents restaurants présents sur la plateforme et disponibles. -->
     <section class="restaurant">
+        <div class="restaurant__container">
         <h3 class="restaurant__title">Restaurants</h3>
             <a href="#">
-            <article class="card">
+            <div class="card">
                 <img class="card__img" src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
                 <button class="new">Nouveau</button>
                 <div class="card__content">
@@ -66,7 +67,7 @@
                 <button class="card__like">
                     <i class="far fa-heart"></i>
                 </button>
-            </article>
+            </div>
             </a>
             <div class="card">
                 <img class="card__img" src="/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg">
@@ -99,16 +100,17 @@
                 <i class="fa-regular fa-heart"></i>
                 </button>
             </div>
+        </div>
     </section>
 </main>
 <!-- Footer -->
 <footer>
     <div class="footnote">
-        <p class="footnote__text"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</p>
-        <p class="footnote__text"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</p>
+        <h1 class="footnote__logo">ohmyfood</h1>
+        <p class="footnote__text--500"><i class="fa-solid fa-utensils"></i> Proposer un restaurant</p>
+        <p class="footnote__text--500"><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</p>
         <p class="footnote__text">Mentions légales</p>
         <p class="footnote__text">Contact</p>
-        <img class="footnote__img" src="images/logo/ohmyfood@2x.svg">
     </div>
 </footer>
 </body>
