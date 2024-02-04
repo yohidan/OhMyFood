@@ -47,6 +47,9 @@ $button-color: linear-gradient(193.33deg, $main-color -11.44%, $secondary-color 
 }
 
 @mixin new_badges {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: absolute;
         font-size: 2.1vh;
         font-weight: 500;
@@ -107,7 +110,7 @@ footer {
         background-color: rgba(53, 53, 53, 1);
 }
 
-h1 {
+h1, h6 {
         font-family: 'Shrikhand';
 }
 
@@ -162,6 +165,7 @@ a {
         cursor: pointer;
 
         & i {
+                color: black;
                 font-size: 3.15vh;
         }
         & i:hover {
@@ -327,6 +331,10 @@ a {
                 border-radius: 20px;
                 background-color: #f6f6f6;
                 @include block-shadow;
+
+                &:hover {
+                        background-color: #f2eafb;
+                }
 
                 @media (min-width: 1024px) {
                         margin-top: 0px;
@@ -496,7 +504,7 @@ a {
                 margin: 0;
                 padding: 0;
                 @media (min-width: 768px) {
-                        flex-direction: row-reverse;
+                        flex-direction: row;
                 }
         }
         .footnote__text {
@@ -553,13 +561,14 @@ a {
 
 .presentation {
         position: relative;
-        top : 21vh;
+        top : 25vh;
         width: 100%;
         background-color: $bg-color;
         padding-bottom: 25vh;
         border-radius: 25px 25px 0 0;
 
         @media (min-width: 1024px) {
+                top: 21vh;
                 width: 75%;
                 margin: 0 auto;
         }
@@ -575,6 +584,7 @@ a {
                 }
 
                 &--text {
+                        margin: 25px 0;
                         font-size: 4.2vh;
                         font-weight: 400;
 

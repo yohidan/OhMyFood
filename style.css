@@ -29,7 +29,7 @@ footer {
   background-color: rgb(53, 53, 53);
 }
 
-h1 {
+h1, h6 {
   font-family: "Shrikhand";
 }
 
@@ -87,6 +87,7 @@ a {
   cursor: pointer;
 }
 .like i {
+  color: black;
   font-size: 3.15vh;
 }
 .like i:hover {
@@ -251,6 +252,9 @@ a {
   background-color: #f6f6f6;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
 }
+.working .step:hover {
+  background-color: #f2eafb;
+}
 @media (min-width: 1024px) {
   .working .step {
     margin-top: 0px;
@@ -355,6 +359,9 @@ a {
   width: 100%;
 }
 .restaurant .restaurant__container .card .new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   font-size: 2.1vh;
   font-weight: 500;
@@ -427,7 +434,7 @@ a {
 }
 @media (min-width: 768px) {
   .footnote .footnote__container {
-    flex-direction: row-reverse;
+    flex-direction: row;
   }
 }
 .footnote .footnote__text {
@@ -477,7 +484,7 @@ a {
 
 .presentation {
   position: relative;
-  top: 21vh;
+  top: 25vh;
   width: 100%;
   background-color: #EAEAEA;
   padding-bottom: 25vh;
@@ -485,6 +492,7 @@ a {
 }
 @media (min-width: 1024px) {
   .presentation {
+    top: 21vh;
     width: 75%;
     margin: 0 auto;
   }
@@ -501,6 +509,7 @@ a {
   }
 }
 .presentation .presentation__title--text {
+  margin: 25px 0;
   font-size: 4.2vh;
   font-weight: 400;
 }
