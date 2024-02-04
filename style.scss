@@ -34,9 +34,9 @@ $bg-color: #EAEAEA;
 
 $special-grey: #353535;
 
-// Le coeur actif
+// Dégradé bouton
 
-$heart-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+$button-color: linear-gradient(193.33deg, $main-color -11.44%, $secondary-color 123.93%);
 
 
 
@@ -70,6 +70,20 @@ $heart-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
         width: 40px;
 }
 
+        // Keyframes
+
+@keyframes transitionIn {
+        from {
+                opacity: 0;
+                transform: rotateX(-10deg);
+        }
+
+        to {
+                opacity: 1;
+                transform: rotateX(0);
+        }
+}
+
 // Conformément aux exigences demandées, nous allons réaliser le site internet de Ohmyfood en utilisant la méthode
 // mobile-first
 
@@ -78,6 +92,7 @@ body {
         position: relative;
         margin: 0;
         width: 100%;
+        animation : transitionIn 1.6s;
 }
 
 header {
@@ -96,7 +111,7 @@ h1 {
         font-family: 'Shrikhand';
 }
 
-button, p, h2, h3, h4, h5 {
+button, p, h2, h3, h4, h5, a {
         font-family: 'Roboto';
 }
 
@@ -121,7 +136,8 @@ a {
         height: 7.5vh;
         width: 58vw;
         border-radius: 25px;
-        background: linear-gradient(193.33deg, $main-color -11.44%, $secondary-color 123.93%);
+        background: $button-color;
+        transition: 0.6s ease;
         @include block-shadow;
 
         @media (min-width: 768px) {
@@ -133,8 +149,37 @@ a {
 }
 
 .btn:hover {
-        background: linear-gradient(200.64deg, $main-color -5.2%, $secondary-color 110.74%),
-        linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+        transform: scale(1.1);
+        text-shadow: white 1px 0 30px;
+        cursor: pointer;
+}
+
+.like {
+        margin: auto 0;
+        padding: 0;
+        background-color: inherit;
+        border: none;
+        cursor: pointer;
+
+        & i {
+                font-size: 3.15vh;
+        }
+        & i:hover {
+                font-weight: 700;
+                background-image: linear-gradient(180deg, #FF79DA, #9356DC);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -moz-text-fill-color: transparent;
+                -moz-background-clip: text;
+                animation: full-heart 300ms ease-in-out both;
+        }
+
+        @media (min-width: 1024px) {
+                position: absolute;
+                top: 31vh;
+                left: 36vw;
+        }
 }
 
         // 1ère Partie du Développement du site : Index.html
@@ -165,6 +210,9 @@ a {
                         @media (min-width: 1024px) {
                                 font-size: 4vh;
                         }
+                &--link {
+                        margin: 0;
+                }
                 }
         }
         .omf__location {
@@ -412,23 +460,6 @@ a {
                                 color: #000000;
                         }
                 }
-                .card__like {
-                        margin: auto 0;
-                        padding: 0;
-                        font-size: 3.15vh;
-                        background-color: white;
-                        border: none;
-                        cursor: pointer;
-                        &:hover {
-                                background: $heart-color;
-                        }
-
-                        @media (min-width: 1024px) {
-                                position: absolute;
-                                top: 31vh;
-                                left: 36vw;
-                        }
-                }
         }
 }
 }
@@ -552,7 +583,9 @@ a {
                         }
 
                 }
-                &--icon {
+                .like__menu {
+                        position: static;
+                        margin: 0 0 0 10px;
                         font-size: 4.2vh;
                 }
         }
@@ -593,10 +626,6 @@ a {
                                 width: 60%;
                         }
 
-                        .menu__title {
-                                display: flex;
-                                
-                        }
                         .menu__container{
                                 display: flex;
                                 flex-direction: column;
@@ -606,7 +635,7 @@ a {
                                 &--title {
                                         margin: 0;
                                         margin: 0 0 0 2.65vw;
-                                        width: 100%;
+                                        width: 120%;
                                 }
                                 &--content {
                                         margin: 0;
@@ -616,14 +645,38 @@ a {
                         }
                         .menu__price {
                                 position: relative;
+                                left: 20vw;
                                 margin: 12.65vh 2.65vw 0 0;
                                 height: 100%;
                                 flex-shrink: 1;
+                                transition: left 0.6s ease;
+
+                                @media (min-width: 768px) {
+                                        left: 25vw;
+                                }
+
+                                @media (min-width: 1024px) {
+                                        left: 8.5vw;
+                                }
                         }
+
+                        &:hover {
+                                cursor: pointer;
+                        }
+
+                        &:hover .menu__price {
+                                left: 0;
+                        }
+
+                        &:hover .check {
+                                left: 0;
+                        }
+
+
                         .check {
                                 display: flex;
                                 position: relative;
-                                left: 30;
+                                left: 30vw;
                                 align-items: center;
                                 justify-content: center;
                                 background-color: $tertiary-color;
@@ -631,6 +684,7 @@ a {
                                 margin: 0;
                                 width: 30%;
                                 height: 100%;
+                                transition: left 0.3s ease;
 
                                 @media (min-width: 1024px) {
                                         width: 20%;
@@ -641,8 +695,8 @@ a {
                                         justify-content: center;
                                         align-items: center;
                                         border-radius: 15px;
-                                        width: 5.33vw;
-                                        height: 3vh;
+                                        width: 30px;
+                                        height: 30px;
                                         background-color: white;
                                         color: $tertiary-color;
 

@@ -12,7 +12,9 @@
 <header>
     <section class="omf omf__space">
         <div class="omf__background">
+            <a href="/index.html" class="omf__background--link">
             <i class="fa-solid fa-arrow-left"></i>
+            </a>
             <h1 class="omf__background--logo">ohmyfood</h1>
         </div>
         <div class="omf__plate">
@@ -24,9 +26,9 @@
     <section class="presentation">
         <div class="presentation__title">
             <h1 class="presentation__title--text">La palette du goût</h1>
-            <div class="presentation__title--icon">
-                <i class="fa-regular fa-heart"></i>
-            </div>
+            <button class="like like__menu">
+                <i class="far fa-heart"></i>
+            </button>
         </div>
         <div class="presentation__menu">
             <!-- Entrées -->
@@ -155,10 +157,12 @@
 <footer>
     <div class="footnote">
         <h1 class="footnote__logo">ohmyfood</h1>
-        <p class="footnote__text--500"><i class="fa-solid fa-utensils"></i> Proposer un restaurant</p>
-        <p class="footnote__text--500"><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</p>
-        <p class="footnote__text">Mentions légales</p>
-        <p class="footnote__text">Contact</p>
+        <div class="footnote__container">
+            <p class="footnote__text--500"><i class="fa-solid fa-utensils"></i> Proposer un restaurant</p>
+            <p class="footnote__text--500"><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</p>
+            <p class="footnote__text">Mentions légales</p>
+            <a href="mailto:contact@ohmyfood.com" class="footnote__text">Contact</a>
+        </div>
     </div>
 </footer>
 </body>
