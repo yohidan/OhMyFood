@@ -207,6 +207,7 @@ a {
                 background-color: white;
                 z-index: 1;
                 &--logo {
+                        font-family: 'Shrikhand';
                         font-size: 30px;
                         font-weight: 400;
                         margin: 0;
@@ -445,6 +446,9 @@ a {
                         width: 100%;
                 }
                 .new {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                         @include new_badges;
                         @media (min-width: 768px) {
                                 width: 12.4vw;

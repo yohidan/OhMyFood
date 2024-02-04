@@ -127,6 +127,7 @@ a {
   z-index: 1;
 }
 .omf .omf__background--logo {
+  font-family: "Shrikhand";
   font-size: 30px;
   font-weight: 400;
   margin: 0;
@@ -359,6 +360,9 @@ a {
   width: 100%;
 }
 .restaurant .restaurant__container .card .new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   display: flex;
   align-items: center;
   justify-content: center;
