@@ -688,18 +688,30 @@ a {
                         .menu__container{
                                 display: flex;
                                 flex-direction: column;
-                                justify-content: space-between;
-                                flex-shrink: 3;
+                                justify-content: center;
                                 width: 100%;
+                                height: 100%;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                transition: width 0.5s ease;
                                 &--title {
                                         margin: 0;
                                         margin: 0 0 0 2.65vw;
-                                        width: 120%;
+                                        width: 100%;
+                                        text-overflow: ellipsis;
+                                        overflow: hidden;
+                                        white-space: nowrap;
                                 }
                                 &--content {
                                         margin: 0;
                                         margin: 0 0 0 2.65vw;
                                         width: 100%;
+                                        text-overflow: ellipsis;
+                                        overflow: hidden;
+                                        white-space: nowrap;
+                                }
+                                &:hover {
+                                        width: 50%;
                                 }
                         }
                         .menu__price {

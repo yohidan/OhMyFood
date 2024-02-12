@@ -626,19 +626,31 @@ a {
 .presentation .presentation__menu .menu .menu__container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  flex-shrink: 3;
+  justify-content: center;
   width: 100%;
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width 0.5s ease;
 }
 .presentation .presentation__menu .menu .menu__container--title {
   margin: 0;
   margin: 0 0 0 2.65vw;
-  width: 120%;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .presentation .presentation__menu .menu .menu__container--content {
   margin: 0;
   margin: 0 0 0 2.65vw;
   width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.presentation .presentation__menu .menu .menu__container:hover {
+  width: 50%;
 }
 .presentation .presentation__menu .menu .menu__price {
   position: relative;
